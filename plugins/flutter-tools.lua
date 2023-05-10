@@ -1,3 +1,4 @@
+local utils = require "astronvim.utils"
 return {
   {
     "mfussenegger/nvim-dap",
@@ -17,6 +18,7 @@ return {
   {
     "akinsho/flutter-tools.nvim",
     opts = function(_, opts)
+      opts.fvm = true
       opts.debugger = {
         enabled = true,
         register_configurations = function(_)
@@ -26,4 +28,23 @@ return {
       }
     end,
   },
+  -- {
+  --   "nank1ro/flutter-tools.nvim",
+  --   ft = { "dart" },
+  --   fvm = true,
+  --   init = function() astronvim.lsp.skip_setup = utils.list_insert_unique(astronvim.lsp.skip_setup, "dartls") end,
+  --   opts = {
+  --     lsp = require("astronvim.utils.lsp").config "dartls",
+  --     debugger = {
+  --       enabled = true,
+  --     },
+  --   },
+  --   dependencies = {
+  --     { "nvim-lua/plenary.nvim" },
+  --     {
+  --       "jay-babu/mason-nvim-dap.nvim",
+  --       opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "dart") end,
+  --     },
+  --   },
+  -- },
 }
