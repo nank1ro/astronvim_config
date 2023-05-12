@@ -1,15 +1,16 @@
 -- create an augroup to easily manage autocommands
-vim.api.nvim_create_augroup("diagnosticcolor", { clear = true })
+vim.api.nvim_create_augroup("diagnostic-color", { clear = true })
 -- create a new autocmd on the "User" event
 vim.api.nvim_create_autocmd("User", {
   desc = "Change diagnostics underline color", -- nice description
   -- triggered when vim.t.bufs is updated
   pattern = "AstroLspSetup", -- the pattern si the name of our User autocommand events
-  group = "diagnosticcolor", -- add the autocmd to the newly created augroup
+  group = "diagnostic-color", -- add the autocmd to the newly created augroup
   callback = function()
     vim.cmd [[
-      hi DiagnosticUnderlineInfo guisp=white gui=undercurl
-      hi DiagnosticUnderlineWarning guisp=orange gui=undercurl
+      highlight DiagnosticUnderlineInfo guisp=white gui=undercurl
+      highlight DiagnosticUnderlineWarn guisp=orange gui=undercurl
+      highlight DiagnosticUnderlineError guisp=red gui=undercurl
     ]]
   end,
 })
@@ -25,6 +26,7 @@ return {
     nrformats = "alpha",
     exrc = true,
     guicursor = "n-v-c-sm:block,i-ci-ve:ver5,r-cr-o:hor4",
+    swapfile = false,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
