@@ -23,7 +23,6 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
-    nrformats = "alpha",
     exrc = true,
     guicursor = "n-v-c-sm:block,i-ci-ve:ver5,r-cr-o:hor4",
     swapfile = false,

@@ -2,4 +2,5 @@
 return {
   "triglav/vim-visual-increment",
   event = "User AstroFile",
+  enabled = false,
 }

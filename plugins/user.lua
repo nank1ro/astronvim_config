@@ -36,4 +36,8 @@ return {
       max_join_length = 2000,
     },
   },
+  {
+    "rcarriga/nvim-notify",
+    enabled = false,
+  },
 }

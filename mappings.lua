@@ -36,12 +36,19 @@ return {
   },
   t = {
     -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
-    ["<esc>"] = { "<C-\\><C-n>" },
+    ["<esc>"] = false,
+    ["jk"] = false,
+
+    ["<c-q>"] = { "<c-\\><c-n>", desc = "Terminal normal mode" },
+    ["<esc><esc>"] = { "<c-\\><c-n>:q<cr>", desc = "Terminal quit" },
+    -- ["<esc>"] = { "<C-\\><C-n>" },
   },
   v = {
     -- keep visual mode after indent
     [">"] = { ">gv" },
     ["<"] = { "<gv" },
+    -- move selected lines
+    ["<M-k>"] = { ":m '<-2<CR>gv=gv", desc = "move line up" },
+    ["<M-j>"] = { ":m '>+1<CR>gv=gv", desc = "move line down" },
   },
 }
