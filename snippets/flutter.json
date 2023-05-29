@@ -670,5 +670,45 @@
 			"import 'package:opossum/l10n/l10n.dart';"
 		],
 		"description": "Import Generated Tranlation File"
+	},
+	"sized box with given width": {
+		"scope": "dart",
+		"prefix": "sw",
+		"body": [
+			"const SizedBox(width: $1),"
+		],
+		"description": "Insert SizedBox with given width"
+	},
+	"sized box with given height": {
+		"scope": "dart",
+		"prefix": "sh",
+		"body": [
+			"const SizedBox(height: $1),"
+		],
+		"description": "Insert SizedBox with given height"
+	},
+	"media query": {
+		"scope": "dart",
+		"prefix": "mediaQuery",
+		"body": [
+			"final mediaQuery = MediaQuery.of(context);"
+		],
+		"description": "Insert MediaQuery"
+	},
+	"Theme": {
+		"scope": "dart",
+		"prefix": "theme",
+		"body": [
+			"final theme = Theme.of(context);"
+		],
+		"description": "Insert Theme"
+	},
+	"text theme": {
+		"scope": "dart",
+		"prefix": "textTheme",
+		"body": [
+			"final textTheme = Theme.of(context).textTheme;"
+		],
+		"description": "Insert TextTheme"
 	}
 }
