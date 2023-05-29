@@ -21,7 +21,7 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":silent w!<cr>", desc = "Save File" }, -- change description but the same command
     -- move between buffers with <TAB> and <Shift+TAB>
     ["<TAB>"] = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
