@@ -16,6 +16,7 @@ vim.api.nvim_create_autocmd("User", {
 })
 -- deactivate python venv command
 vim.api.nvim_create_user_command("VenvDeactivate", function() require("venv-selector").deactivate_venv() end, {})
+
 -- set vim options here (vim.<first_key>.<second_key> = value)
 return {
   opt = {
