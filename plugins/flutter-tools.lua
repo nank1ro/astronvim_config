@@ -51,7 +51,7 @@ return {
             user_utils.path_join(user_utils.home_path, ".pub-cache"),
             user_utils.path_join(user_utils.home_path, "fvm/versions"),
           },
-          renameFilesWithClasses = "prompt", -- "always"
+          renameFilesWithClasses = "always", -- "always"
           enableSnippets = true,
           updateImportsOnRename = true, -- Whether to update imports and other directives when files are renamed. Required for `FlutterRename` command.
         },
