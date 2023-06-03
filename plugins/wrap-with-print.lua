@@ -4,6 +4,6 @@ return {
   {
     "wrap-with-print",
     dir = "~/.config/nvim/lua/user/custom-plugins/wrap-with-print",
-    cmd = "WrapWithPrint",
+    event = "User AstroFile",
   },
 }
