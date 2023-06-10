@@ -7,7 +7,7 @@ local M = {}
 M.wrap = function()
   local line = vim.api.nvim_get_current_line()
   local words = {}
-  for word in line:gmatch "%w+" do
+  for word in line:gmatch "%S+" do
     table.insert(words, word)
   end
 
@@ -24,7 +24,12 @@ M.wrap = function()
 
   local str = initial_spaces .. 'print("'
   for i, v in pairs(words) do
-    str = str .. v .. ": $" .. v
+    -- check if str contains a dot
+    if string.find(v, "%.") then
+      str = str .. v .. ": ${" .. v .. "}"
+    else
+      str = str .. v .. ": $" .. v
+    end
     if i ~= #words then str = str .. " " end
   end
 

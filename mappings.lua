@@ -33,6 +33,7 @@ return {
     },
     -- disable because used by undotree
     ["<leader>ut"] = false,
+    ["<leader>fp"] = { ":Telescope command_history<cr>", desc = "Find command history" },
   },
   t = {
     -- setting a mapping to false will disable it
