@@ -82,6 +82,9 @@ return {
     --   },
     -- }
   end,
-  -- plugins = {
-  -- },
+  plugins = {
+    toggleterm = {
+      start_in_insert = true,
+    },
+  },
 }

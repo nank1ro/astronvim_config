@@ -5,7 +5,7 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   { import = "astrocommunity.editing-support.treej", enabled = false },
-  { import = "astrocommunity.git.git-blame-nvim" },
+  { import = "astrocommunity.git.git-blame-nvim", enabled = false },
   { import = "astrocommunity.editing-support.text-case-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.project.nvim-spectre" },
